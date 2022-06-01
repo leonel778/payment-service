@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: payment-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8095
+  data:
+    mongodb:
+      uri: mongodb+srv://leonel:leonel@cluster0.we5wo.mongodb.net/bank
+
+eureka:
+  client:
+    service-url:
+      defaultZone:
+        http://localhost:8096/eureka
+  instance:
+    preferIpAddress: true
